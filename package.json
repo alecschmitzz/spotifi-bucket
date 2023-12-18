@@ -23,13 +23,12 @@
     "@aws-sdk/s3-request-presigner": "^3.474.0",
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2"
   },
   "scripts": {
     "dev": "dotenv -e .env.development -- bun --hot run ./src/index.ts",
     "dev-test": "dotenv -e .env.development -- jest --watchAll --verbose --coverage",
-    "dev-build": "dotenv -e .env.development -- bunx prisma generate && dotenv -e .env.development -- bunx prisma migrate dev && dotenv -e .env.development -- bunx prisma migrate deploy",
-    "build": "bunx prisma generate && bunx prisma migrate deploy",
     "test": "jest"
   }
 }
