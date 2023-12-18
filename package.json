@@ -5,7 +5,15 @@
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
-    "bun-types": "latest"
+    "@types/jest": "^29.5.11",
+    "@types/supertest": "^2.0.16",
+    "bun-types": "latest",
+    "jest": "^29.7.0",
+    "jest-mock-extended": "^3.0.5",
+    "jest-mock-req-res": "^1.0.2",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.3"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
@@ -22,6 +30,6 @@
     "dev-test": "dotenv -e .env.development -- jest --watchAll --verbose --coverage",
     "dev-build": "dotenv -e .env.development -- bunx prisma generate && dotenv -e .env.development -- bunx prisma migrate dev && dotenv -e .env.development -- bunx prisma migrate deploy",
     "build": "bunx prisma generate && bunx prisma migrate deploy",
-    "test": "jest --watchAll --verbose --coverage"
+    "test": "jest"
   }
 }
